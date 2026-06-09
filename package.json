@@ -9,5 +9,14 @@
   "keywords": [],
   "author": "Sourav Jha",
   "license": "ISC",
-  "description": "A full-stack blog application built with Node.js, Express, MongoDB and Handlebars"
+  "description": "A full-stack blog application built with Node.js, Express, MongoDB and Handlebars",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.7.0",
+    "nodemon": "^3.1.14"
+  }
 }

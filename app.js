@@ -1,3 +1,4 @@
+require('dotenv').config()
  const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -8,12 +9,13 @@ const path = require('path');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/blogDB', {
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGO_URI, {
   family: 4
 })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
-
 // Handlebars setup
 app.engine('handlebars', engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
